@@ -17,14 +17,11 @@ jobs:
           DISCORD_WEBHOOK_URL: https://discord.com/api/webhooks/1318642830553387018/A1AmS2B5gOMVYA3AyDH9Roz7dn3FBtpL2c2BhujOoTNUtmCw4fvebhDLlKx0t502FC-6
           REPOSITORY_URL: https://github.com/MiguelSanzBr/HotelPiotti
         run: |
-          # Obter o ID do último commit e o nome da branch
           COMMIT_ID=$(git rev-parse --short HEAD)
           BRANCH_NAME=$(git rev-parse --abbrev-ref HEAD)
 
-          # Montar mensagem do webhook
-          PAYLOAD=$(jq -n --arg content "Commit: N° $COMMIT_ID feito na branch $BRANCH_NAME no repo dos crias: $REPOSITORY_URL" '{content: $content}')
+          PAYLOAD=$(jq -n --arg content "Commit: $COMMIT_ID feito na branch $BRANCH_NAME no repo dos crias: $REPOSITORY_URL, Vlw!!!" '{content: $content}')
 
-          # Enviar requisição para o Discord
           curl -X POST \
             -H "Content-Type: application/json" \
             -d "$PAYLOAD" \
