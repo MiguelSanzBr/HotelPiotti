@@ -1,80 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>
-        Hotel Piotti
-    </title>
-    <meta name="description" content="Simple landind page for hotel" />
-    <meta name="keywords" content="" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet" />
-  </head>
-  <!--Icon: http://www.potlabicons.com/ -->
-  <!--Icon2: https://fontawesome.com/ -->
-  <body class="leading-normal tracking-normal text-white overflow-x-hidden" style="font-family: 'Source Sans Pro', sans-serif;">
-    <div class="grid place-items-center w-screen h-screen bg-black">
-        <div class="text-center">
-          <p class="text-lg uppercase mb-2 font-serif mono italic">WELCOME TO</p>
-          <h1 class="text-8xl font-bold mb-2 font-sans">Hotel Piotti</h1>
-          <p class="text-3xl mb-6 mt-8">Resort & Hotel</p>
-          <button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold mt-24 px-4 py-2 w-64 border border-gray-400 rounded-lg shadow">
-            SAIBA MAIS
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>
+    Hotel Piotti
+  </title>
+  <meta name="description" content="Simple landind page for hotel" />
+  <meta name="keywords" content="" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet" />
+</head>
+<!--Icon: http://www.potlabicons.com/ -->
+<!--Icon2: https://fontawesome.com/ -->
+
+<body class="leading-normal tracking-normal text-white overflow-x-hidden"
+  style="font-family: 'Source Sans Pro', sans-serif;">
+  <div class="bg-cover bg-center bg-fixed bg-[url('/img/home.jpg')] grid place-items-center w-screen h-screen">
+    <div class="text-center">
+      <p class="text-lg uppercase mb-2 font-serif mono italic">WELCOME TO</p>
+      <h1 class="text-8xl font-bold mb-2 font-sans">Hotel Piotti</h1>
+      <p class="text-3xl mb-6 mt-8">Resort & Hotel</p>
+      <button
+        class="bg-white hover:bg-gray-100 text-gray-800 font-semibold mt-24 px-4 py-2 w-64 border border-gray-400 rounded-lg shadow">
+        SAIBA MAIS
+      </button>
+    </div>
+  </div>
+
+  <!-- Inicio sessão das comodações -->
+
+  <div class="w-screen h-screen bg-orange-50 items-center justify-center text-center p-8 text-amber-950">
+    <h2 class="font-bold text-6xl mt-16 ml-8 text-center">Acomodações</h2>
+    <div class="mt-24 flex justify-between w-full">
+
+      <div class="p-6 text-start transition duration-300 hover:-translate-y-2">
+        <img src="img/luxe_room.jpg" alt="luxe_room" class="rounded-lg mb-5 cursor-pointer">
+        <div class="border border-amber-700 rounded-lg p-6 text-start cursor-pointer">
+          <p>2 adultos | 1 criança</p>
+          <h3 class="my-5 font-bold text-2xl">De Luxe Room</h3>
+          <p>por R$189 a noite</p>
+        </div>
+      </div>
+
+      <div class="p-6 text-start transition duration-300 hover:-translate-y-2">
+        <img src="img/luxe_com_vista.jpg" alt="luxe_room" class="rounded-lg mb-5 cursor-pointer">
+        <div class="border border-amber-700 rounded-lg p-6 text-start cursor-pointer">
+          <p>2 adultos | 1 criança</p>
+          <h3 class="my-5 font-bold text-2xl">De Luxe com Vista</h3>
+          <p>por R$209 a noite</p>
+        </div>
+      </div>
+
+      <div class="p-6 transition duration-300 hover:-translate-y-2">
+        <img src="img/suite_familia.jpg" alt="luxe_room" class="rounded-lg mb-5 cursor-pointer">
+        <div class="border border-amber-700 rounded-lg p-6 text-start cursor-pointer">
+          <p>4 adultos | 2 crianças</p>
+          <h3 class="my-5 font-bold text-2xl">Suíte da Família</h3>
+          <p>por R$399 a noite</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- fim dela -->
+  <!-- Inicio da sessão de recomendações -->
+  <div class="w-screen h-screen bg-orange-50 items-center justify-center text-center p-8 text-amber-950">
+    <h2 class="font-light text-6xl mt-16 ml-10 text-start">Recomendação Piotti</h2>
+    <div class="mt-24 ml-5 grid grid-cols-2 w-full">
+
+      <div class="p-6 text-start">
+        <h2 class="font-bold my-10 text-6xl">Suíte da família</h2>
+        <ul class="list-disc font-bold">
+          <li>Espaço Amplo: Áreas separadas para dormir e socializar.</li>
+          <li>Conforto Superior: Camas king size e roupa de cama de alta qualidade.</li>
+          <li>Banheiro Luxuoso: Banheira de imersão e amenidades premium.</li>
+          <li>Tecnologia e Entretenimento: TV de tela plana, Wi-Fi gratuito e sistema de som moderno.</li>
+          <li>Decoração Elegante: Ambiente moderno e sofisticado.</li>
+          <li>Serviços Adicionais: Serviço de quarto 24 horas, Kids Club, piscina e spa.</li>
+        </ul>
+      </div>
+
+      <div class="p-6 max-h-80">
+        <img src="img/suite_familia.jpg" alt="luxe_room" class="rounded-lg mb-5 max-h-[500px] w-full object-contain">
+        <div class="border border-amber-700 rounded-lg p-6 text-center">
+          <p>A Suíte da Família oferece conforto, luxo e espaço ideal para momentos inesquecíveis com sua família.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- fim dela -->
+
+
+  <div class="w-screen h-screen bg-amber-900 items-center justify-center text-center p-8">
+    <h2 class="font-medium text-5xl mt-16 ml-8 text-left">The Hotel Piotti</h2>
+    <div class="mt-24 flex justify-evenly w-full">
+
+      <div class="border-2 border-white rounded-lg p-5 text-start">
+        <h1 class="mb-4 text-2xl">Escritório de Reservas</h1>
+        <ul class="list-inside">
+          <li class="mb-2 flex items-center">
+            <svg class="w-3.5 h-3.5 text-gray-500 dark:text-gray-400 mr-2" xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor" viewBox="0 0 384 512">
+              <path
+                d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z" />
+            </svg>
+            <span class="block">123 Random St.,</span>
+            <span class="block">Any City ST 12345</span>
+          </li>
+          <li class="mb-2 flex items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 text-gray-500 dark:text-gray-400 mr-2"
+              fill="currentColor" viewBox="0 0 384 512">
+              <path
+                d="M80 0C44.7 0 16 28.7 16 64l0 384c0 35.3 28.7 64 64 64l224 0c35.3 0 64-28.7 64-64l0-384c0-35.3-28.7-64-64-64L80 0zm80 432l64 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-64 0c-8.8 0-16-7.2-16-16s7.2-16 16-16z" />
+            </svg>
+            1123-456-7890
+          </li>
+          <li class="flex items-center">
+            <svg class="w-3.5 h-3.5 text-gray-500 dark:text-gray-400 mr-2" aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 16">
+              <path d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z">
+              </path>
+              <path
+                d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z">
+              </path>
+            </svg>
+            <a href="mailto:path@teste.com" class="text-blue-500">path@teste.com</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="border-2 border-white rounded-lg p-5 text-start">
+        <h1 class="mb-4 text-2xl">Horário de expediente</h1>
+        <ul class="list-inside">
+          <li class="mb-2">Segunda a Sexta <span class="block"></span>
+            9:00 até as 18:00 </li>
+          <li class="mb-2">Sabado <span class="block"></span> 9:00 até as 18:00</li>
+        </ul>
+      </div>
+
+      <div class="border-2 border-white rounded-lg p-3 ">
+        <h1 class="mb-4 text-2xl">Redes Sociais</h1>
+        <div class="mx-2">
+          <button type="button" data-twe-ripple-init data-twe-ripple-color="light"
+            class="p-6 mt-4 mx-4 mb-2 inline-block rounded-full p-3 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg border-2 border-white bg-transparent">
+            <span class="[&>svg]:h-8 [&>svg]:w-8"> <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                viewBox="0 0 512 512">
+                <path
+                  d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" />
+              </svg></span>
+          </button>
+          <button type="button" data-twe-ripple-init data-twe-ripple-color="light"
+            class="p-6 mt-4 mx-4 mb-2 inline-block rounded-full p-3 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg border-2 border-white bg-transparent">
+            <span class="[&>svg]:h-8 [&>svg]:w-8"> <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                viewBox="0 0 320 512">
+                <path
+                  d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z" />
+              </svg></span>
+          </button>
+          <button type="button" data-twe-ripple-init data-twe-ripple-color="light"
+            class="p-6 mt-4 mx-4 mb-2 inline-block rounded-full p-3 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg border-2 border-white bg-transparent">
+            <span class="[&>svg]:h-8 [&>svg]:w-8"> <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                viewBox="0 0 448 512">
+                <path
+                  d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+              </svg></span>
           </button>
         </div>
       </div>
 
-    <div class="w-screen h-screen bg-amber-900 items-center justify-center text-center p-8">
-        <h2 class="font-bold text-3xl mt-16 ml-8 text-left">The Hotel Piotti</h2>
-        <div class="mt-24 ml-8 flex justify-between w-full">
-            <div class="border-2 border-white rounded-lg p-6 mr-8 text-start inline-block">
-                <h1 class="mb-4 text-2xl">Escritório de Reservas</h1>
-                <ul class="list-inside">
-                    <li class="mb-2 flex items-center">
-                        <svg class="w-3.5 h-3.5 text-gray-500 dark:text-gray-400 mr-2" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 384 512">
-                          <path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/>
-                        </svg>  
-                        <span class="block">123 Random St.,</span>
-                        <span class="block">Any City ST 12345</span>
-                      </li>
-                <li class="mb-2 flex items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 text-gray-500 dark:text-gray-400 mr-2" fill="currentColor" viewBox="0 0 384 512"><path d="M80 0C44.7 0 16 28.7 16 64l0 384c0 35.3 28.7 64 64 64l224 0c35.3 0 64-28.7 64-64l0-384c0-35.3-28.7-64-64-64L80 0zm80 432l64 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-64 0c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/></svg>
-                        1123-456-7890</li>
-                <li class="flex items-center">
-                    <svg class="w-3.5 h-3.5 text-gray-500 dark:text-gray-400 mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 16">
-                      <path d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z"></path>
-                      <path d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z"></path>
-                    </svg>
-                    <a href="mailto:path@teste.com" class="text-blue-500">path@teste.com</a>
-                  </li>
-            </ul>
-            </div>
-            <div class="border-2 border-white rounded-lg p-6 mx-8 text-start">
-                <h1 class="mb-4 text-2xl">Horário de expediente</h1>
-                <ul class="list-inside">
-                <li class="mb-2">Segunda a Sexta <span class="block"></span>
-                    9:00 até as 18:00 </li>
-                <li class="mb-2">Sabado <span class="block"></span> 9:00 até as 18:00</li>
-                </ul>
-            </div>
-            <div class="border-2 border-white rounded-lg p-6 mx-8">
-                <h1 class="mb-4 text-2xl">Redes Sociais</h1>
-                    <div class="mx-2">
-                    <button type="button" data-twe-ripple-init data-twe-ripple-color="light" class="p-6 mt-4 mx-4 mb-2 inline-block rounded-full p-3 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg border-2 border-white bg-transparent">
-                        <span class="[&>svg]:h-8 [&>svg]:w-8">  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 512 512"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" /></svg></span>
-                    </button>
-                    <button type="button" data-twe-ripple-init data-twe-ripple-color="light" class="p-6 mt-4 mx-4 mb-2 inline-block rounded-full p-3 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg border-2 border-white bg-transparent">
-                        <span class="[&>svg]:h-8 [&>svg]:w-8">  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 320 512"><path d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z" /></svg></span>
-                    </button>
-                    <button type="button" data-twe-ripple-init data-twe-ripple-color="light" class="p-6 mt-4 mx-4 mb-2 inline-block rounded-full p-3 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg border-2 border-white bg-transparent">
-                       <span class="[&>svg]:h-8 [&>svg]:w-8"> <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" /></svg></span>
-                    </button>
-                    </div>
-            </div>
-        </div>
     </div>
-    
-  </body>
+  </div>
+
+</body>
+
 </html>
