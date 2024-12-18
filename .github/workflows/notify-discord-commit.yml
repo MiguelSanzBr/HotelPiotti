@@ -20,8 +20,7 @@ jobs:
           COMMIT_ID=$(git rev-parse --short HEAD)
           BRANCH_NAME=$(git rev-parse --abbrev-ref HEAD)
 
-          PAYLOAD=$(jq -n --arg content "Commit: $COMMIT_ID \nFeito na branch: $BRANCH_NAME \
-          \nNo repositório dos crias: $REPOSITORY_URL \nVlw!!!" '{content: $content}')
+          PAYLOAD=$(jq -n --arg content "**Commit:** $COMMIT_ID \nFeito na **branch:** $BRANCH_NAME \nNo **repositório** dos crias: $REPOSITORY_URL \nVlw!!!" '{content: $content}')
 
           curl -X POST \
             -H "Content-Type: application/json" \
