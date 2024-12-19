@@ -1,0 +1,29 @@
+version: '3.8'
+services:
+  web:
+    image: php:8.1-apache
+    container_name: hotel_piotti_web
+    ports:
+      - "8080:80"
+    volumes:
+      - ./www:/var/www/html
+    depends_on:
+      - db
+  
+  db:
+    image: postgres:latest
+    container_name: hotel_piotti_db
+    environment:
+      - POSTGRES_USER: ${POSTGRES_USER}
+      - POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      - POSTGRES_DB: ${POSTGRES_DB}
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./sql:/docker-entrypoint-initdb.d
+
+  adminer:
+    image: adminer
+    container_name: hotel_piotti_adminer
+    ports:
+      - "8081:8080"

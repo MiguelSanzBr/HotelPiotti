@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>
-        Hotel Piotti - Criar Conta
+        Hotel Piotti - Login
     </title>
     <meta name="description" content="Simple landind page for hotel" />
     <meta name="keywords" content="" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body
@@ -20,14 +20,8 @@
     style="font-family: 'Poppins', sans-serif;">
 
     <div class="bg-white p-8 rounded-lg shadow-md w-96 bg-opacity-30 backdrop-blur-md">
-        <h2 class="text-3xl font-bold mb-6 text-center">Cadastro</h2>
+        <h2 class="text-3xl font-bold mb-6 text-center">Login</h2>
         <form action="#">
-            <div class="mb-4">
-                <label for="name" class="block text-sm font-medium text-gray-900">Nome</label>
-                <input type="text" id="name"
-                    class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                    placeholder="Joãozinho" required>
-            </div>
             <div class="mb-4">
                 <label for="email" class="block text-sm font-medium text-gray-900">Email</label>
                 <input type="email" id="email"
@@ -40,14 +34,14 @@
                     class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                     placeholder="********" required>
             </div>
-            <div class="text-center">
-                <a href="#" class="font-bold text-indigo-600 transition duration-300 hover:text-indigo-800">Fazer login</a>
+            <div class="text-center"> 
+                <a href="#" class="font-bold text-indigo-600 transition duration-300 hover:text-indigo-800">Criar conta</a> 
                 <p class="my-5">ou</p>
             </div>
             <div class="mt-6">
                 <button type="submit"
                     class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                    Criar conta
+                    Entrar na conta
                 </button>
             </div>
         </form>
