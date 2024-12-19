@@ -12,14 +12,13 @@
   <meta name="keywords" content="" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <!--Icon: http://www.potlabicons.com/ -->
 <!--Icon2: https://fontawesome.com/ -->
 
-<body class="leading-normal tracking-normal text-white overflow-x-hidden"
-  style="font-family: 'Poppins', sans-serif;">
-  <div class="bg-cover bg-center bg-fixed bg-[url('/img/home.jpg')] grid place-items-center w-screen h-screen">
+<body class="leading-normal tracking-normal text-white overflow-x-hidden" style="font-family: 'Poppins', sans-serif;">
+  <section class="bg-cover bg-center bg-fixed bg-[url('img/home.jpg')] grid place-items-center w-screen h-screen">
     <div class="text-center">
       <p class="text-lg uppercase mb-2 font-serif mono italic font-bold tracking-widest">WELCOME TO</p>
       <h1 class="text-8xl mb-2 font-sans">Hotel Piotti</h1>
@@ -29,11 +28,11 @@
         SAIBA MAIS
       </button>
     </div>
-  </div>
+  </section>
 
   <!-- Inicio sessão das comodações -->
 
-  <div class="w-screen h-screen bg-orange-50 items-center justify-center text-center p-8 text-amber-950">
+  <section class="w-screen h-screen bg-orange-50 items-center justify-center text-center p-8 text-amber-950">
     <h2 class="font-bold text-6xl mt-16 ml-8 text-center">Acomodações</h2>
     <div class="mt-24 flex justify-between w-full">
 
@@ -65,39 +64,55 @@
       </div>
 
     </div>
-  </div>
+  </section>
 
-  <!-- fim dela -->
-  <!-- Inicio da sessão de recomendações -->
-  <div class="w-screen h-screen bg-orange-50 items-center justify-center text-center p-8 text-amber-950">
-    <h2 class="font-light text-6xl mt-16 ml-10 text-start">Recomendação Piotti</h2>
-    <div class="mt-24 ml-5 grid grid-cols-2 w-full">
-
-      <div class="p-6 text-start">
-        <h2 class="font-bold my-10 text-6xl">Suíte da família</h2>
-        <ul class="list-disc font-bold">
-          <li>Espaço Amplo: Áreas separadas para dormir e socializar.</li>
-          <li>Conforto Superior: Camas king size e roupa de cama de alta qualidade.</li>
-          <li>Banheiro Luxuoso: Banheira de imersão e amenidades premium.</li>
-          <li>Tecnologia e Entretenimento: TV de tela plana, Wi-Fi gratuito e sistema de som moderno.</li>
-          <li>Decoração Elegante: Ambiente moderno e sofisticado.</li>
-          <li>Serviços Adicionais: Serviço de quarto 24 horas, Kids Club, piscina e spa.</li>
-        </ul>
-      </div>
-
-      <div class="p-6 max-h-80">
-        <img src="img/suite_familia.jpg" alt="luxe_room" class="rounded-lg mb-5 max-h-[500px] w-full object-contain">
-        <div class="border border-amber-700 rounded-lg p-6 text-center">
-          <p>A Suíte da Família oferece conforto, luxo e espaço ideal para momentos inesquecíveis com sua família.</p>
-        </div>
-      </div>
-
+  <section
+    class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center p-8 w-screen h-screen bg-orange-50 text-amber-950">
+    <div class="ml-10 text-left" id="target-section">
+      <h2 class="font-light text-6xl mb-28 text-start">Recomendação Piotti</h2>
+      <h1 class="text-5xl font-bold text-[#643819] mb-16">Suíte da família</h1>
+      <ul class="space-y-2 text-lg text-[#643819] list-disc">
+        <li><strong>Conforto Superior:</strong> Camas king size e roupa de cama de alta qualidade.</li>
+        <li><strong>Banheiro Luxuoso:</strong> Banheira de imersão e amenidades premium.</li>
+        <li><strong>Tecnologia e Entretenimento:</strong> TV, Wi-Fi gratuito e sistema de som moderno.</li>
+        <li><strong>Decoração Elegante:</strong> Ambiente moderno e sofisticado.</li>
+        <li><strong>Serviços Adicionais:</strong> Serviço de quarto 24 horas, Kids Club, piscina e spa.</li>
+      </ul>
     </div>
-  </div>
+    <div class="flex flex-col justify-center mt-16" id="target-section2">
+      <img src="img/suite_familia.jpg" alt="Suite da família"
+        class="w-[600px] max-w-[90%] rounded-lg shadow-lg object-cover">
+      <div class="w-[600px] max-w-[90%] mt-4 p-6 border border-amber-700 rounded-lg p-6 text-center">
+        <p>A Suíte da Família oferece conforto, luxo e espaço ideal para momentos inesquecíveis com sua família.</p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+
+          entry.target.classList.add('animate-fadeIn');
+          entry.target.classList.remove('hidden-before-scroll');
+
+          observer.unobserve(entry.target);
+        }
+      });
+    });
+
+    const target = document.getElementById('target-section');
+    const target2 = document.getElementById('target-section2');
+    observer.observe(target);
+    observer.observe(target2);
+  </script>
+
+
+
   <!-- fim dela -->
 
 
-  <div class="w-screen h-screen bg-amber-900 items-center justify-center text-center p-8">
+  <section class="w-screen h-screen bg-amber-900 text-center p-8">
     <h2 class="font-medium text-5xl mt-16 ml-8 text-left">The Hotel Piotti</h2>
     <div class="mt-24 flex justify-evenly w-full">
 
@@ -175,7 +190,7 @@
       </div>
 
     </div>
-  </div>
+  </section>
 
 </body>
 
