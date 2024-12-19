@@ -12,7 +12,7 @@
   <meta name="keywords" content="" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <!--Icon: http://www.potlabicons.com/ -->
 <!--Icon2: https://fontawesome.com/ -->
@@ -23,12 +23,18 @@
       <p class="text-lg uppercase mb-2 font-serif mono tracking-widest">WELCOME TO</p>
       <h1 class="text-8xl mb-2 font-sans">Hotel Piotti</h1>
       <p class="text-3xl mb-6 mt-8">Resort & Hotel</p>
-      <button
+      <button onclick="redirectLogin()"
         class="bg-white hover:bg-gray-100 text-gray-800 font-semibold mt-24 px-4 py-2 w-64 border border-gray-400 rounded-lg shadow">
         SAIBA MAIS
       </button>
     </div>
   </section>
+
+  <script>
+    function redirectLogin(){
+      window.location.href="login.php"
+    }
+  </script>
 
   <!-- Inicio sessão das comodações -->
 
@@ -37,7 +43,7 @@
     <div class="mt-24 flex justify-between w-full">
 
       <div class="p-6 text-start transition duration-300 hover:-translate-y-2">
-        <img src="img/luxe_room.jpg" alt="luxe_room" class="rounded-lg mb-5 cursor-pointer">
+        <img src="./img/luxe_room.jpg" alt="luxe_room" class="rounded-lg mb-5 cursor-pointer">
         <div class="border border-amber-700 rounded-lg p-6 text-start cursor-pointer">
           <p>2 adultos | 1 criança</p>
           <h3 class="my-5 font-bold text-2xl">De Luxe Room</h3>
