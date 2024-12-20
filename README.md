@@ -1,2 +1,2 @@
 # HotelPiotti
-Um sistema de Hotel para os Hóspedes
+Um sistema de Hotel para os Hóspedes.
