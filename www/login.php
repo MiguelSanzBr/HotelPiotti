@@ -23,7 +23,7 @@
         <h2 class="text-3xl font-bold mb-6 text-center">Login</h2>
 
         <!-- Formulário de acesso a conta -->
-        <form action="#">
+        <form action="process_login.php" method="POST">
             <div class="mb-4">
                 <!-- Input de email do usuario, name = email -->
                 <label for="email" class="block text-sm font-medium text-gray-900">Email</label>
@@ -40,7 +40,7 @@
             </div>
             <div class="text-center"> 
                 <!-- Link para página de cadastro de conta nova -->
-                <a href="cadastro.php" class="font-bold text-indigo-600 transition duration-300 hover:text-indigo-800">Criar conta</a> 
+                <a href="register.php" class="font-bold text-indigo-600 transition duration-300 hover:text-indigo-800">Criar conta</a> 
                 <p class="my-5">ou</p>
             </div>
             <div class="mt-6">

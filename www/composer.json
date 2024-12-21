@@ -1,0 +1,11 @@
+{
+    "require": {
+        "illuminate/database": "^10.48",
+        "illuminate/events": "^10.48",
+        "illuminate/hashing": "^10.48",
+        "illuminate/support": "^10.48",
+        "illuminate/container": "^10.48",
+        "illuminate/config": "^10.48",
+        "illuminate/pipeline": "^10.48"
+    }
+}
