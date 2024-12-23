@@ -19,6 +19,16 @@
     class="leading-normal tracking-normal overflow-x-hidden flex items-center justify-center w-screen h-screen bg-cover bg-center bg-fixed bg-[url('img/home.jpg')]"
     style="font-family: 'Poppins', sans-serif;">
 
+<?php
+require 'auth.php';
+$user = auth();
+
+if ($user) {
+    echo 'Login bem-sucedido! Bem-vindo, ' . $user->name;
+    die();
+} 
+?>
+    
     <div class="bg-white p-8 rounded-lg shadow-md w-96 bg-opacity-30 backdrop-blur-md">
         <h2 class="text-3xl font-bold mb-6 text-center">Login</h2>
 
@@ -40,6 +50,10 @@
             </div>
             <div class="text-center"> 
                 <!-- Link para página de cadastro de conta nova -->
+                <div class="flex items-center my-5">
+                    <input id="lembrar-de-mim" name="lembrar-de-mim" type="checkbox" value="1" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                    <label for="lembrar-de-mim" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Lembrar De mim</label>
+                </div>
                 <a href="register.php" class="font-bold text-indigo-600 transition duration-300 hover:text-indigo-800">Criar conta</a> 
                 <p class="my-5">ou</p>
             </div>

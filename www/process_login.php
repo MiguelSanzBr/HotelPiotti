@@ -1,29 +1,15 @@
 <?php
 
-use Illuminate\Database\Capsule\Manager as Capsule;
-
 require 'vendor/autoload.php';
-require 'bootstrap.php'; // Incluir o bootstrap configurado
-
-// Configurar Eloquent no bootstrap.php
-$capsule = new Capsule;
-$capsule->addConnection([
-    'driver'    => 'pgsql',
-    'host'      => 'hotel_piotti_db',
-    'database'  => 'hotel_piotti_db',
-    'username'  => 'root',
-    'password'  => 'admin123',
-    'charset'   => 'utf8',
-    'collation' => 'utf8_unicode_ci',
-    'prefix'    => '',
-]);
-$capsule->setAsGlobal();
-$capsule->bootEloquent();
-
-// Incluir a classe User
+require 'bootstrap.php'; 
 require 'class/user.php';
+require 'DatabaseConnection.php';
 
 // Passar o hasher para o modelo User
+function generateRememberToken() {
+    return bin2hex(random_bytes(30));  
+}
+
 User::setHasher($hasher);
 
 // Processar o login
@@ -33,8 +19,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Verificar se o usuário existe
     $user = User::where('email', $email)->first();
-
+    
     if ($user && $hasher->check($password, $user->password)) {
+        if (isset($_POST['lembrar-de-mim'])) {
+            $rememberToken = bin2hex(random_bytes(30));
+            setcookie('remember_token', $rememberToken, time() + (86400 * 30), "/"); // Expira em 30 dias
+            $user->remember_token = $rememberToken;
+            $user->save();
+        }
         echo 'Login bem-sucedido! Bem-vindo, ' . $user->name;
     } else {
         echo 'Email ou senha incorretos.';

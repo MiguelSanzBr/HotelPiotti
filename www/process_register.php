@@ -1,26 +1,7 @@
 <?php
 
-use Illuminate\Database\Capsule\Manager as Capsule;
-
-require 'vendor/autoload.php';
-require 'bootstrap.php'; // Incluir o bootstrap configurado
-
-// Configurar Eloquent no bootstrap.php
-$capsule = new Capsule;
-$capsule->addConnection([
-    'driver'    => 'pgsql',
-    'host'      => 'hotel_piotti_db',
-    'database'  => 'hotel_piotti_db',
-    'username'  => 'root',
-    'password'  => 'admin123',
-    'charset'   => 'utf8',
-    'collation' => 'utf8_unicode_ci',
-    'prefix'    => '',
-]);
-$capsule->setAsGlobal();
-$capsule->bootEloquent();
-
-// Incluir a classe User
+require 'bootstrap.php'; 
+require 'DatabaseConnection.php';
 require 'class/user.php';
 
 // Passar o hasher para o modelo User
@@ -40,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         User::create([
             'name' => $name,
             'email' => $email,
-            'password' => $password // Será automaticamente hasheada
+            'password' => $password 
         ]);
         echo 'Registro bem-sucedido! Você pode agora fazer login. <a href="login.php">Pagina de login</a>';
     }

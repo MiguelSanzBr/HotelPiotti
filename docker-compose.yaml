@@ -15,15 +15,7 @@ services:
       interval: 30s
       timeout: 10s
       retries: 3
-    command: >
-      sh -c "
-      apt-get update &&
-      apt-get install -y curl unzip libpq-dev &&
-      curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer &&
-      docker-php-ext-install pdo pdo_pgsql &&
-      composer install &&
-      php-fpm 
-      "
+    command: ["/bin/bash", "/var/www/html/setupWeb.sh"]
 
   nginx:
     image: nginx:latest
