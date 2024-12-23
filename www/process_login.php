@@ -9,7 +9,7 @@ require 'bootstrap.php'; // Incluir o bootstrap configurado
 $capsule = new Capsule;
 $capsule->addConnection([
     'driver'    => 'pgsql',
-    'host'      => '127.0.0.1',
+    'host'      => 'hotel_piotti_db',
     'database'  => 'hotel_piotti_db',
     'username'  => 'root',
     'password'  => 'admin123',
