@@ -1,9 +1,9 @@
 <?php
 
-require 'vendor/autoload.php';
-require 'bootstrap.php'; 
-require 'class/user.php';
-require 'DatabaseConnection.php';
+require '../vendor/autoload.php';
+require '../bootstrap.php'; 
+require '../database/DatabaseConnection.php';
+require '../models/user.php';
 
 // Passar o hasher para o modelo User
 function generateRememberToken() {

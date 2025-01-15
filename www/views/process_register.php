@@ -1,8 +1,8 @@
 <?php
 
-require 'bootstrap.php'; 
-require 'DatabaseConnection.php';
-require 'class/user.php';
+require '../bootstrap.php'; 
+require '../database/DatabaseConnection.php';
+require '../models/user.php';
 
 // Passar o hasher para o modelo User
 User::setHasher($hasher);

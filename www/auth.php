@@ -1,7 +1,7 @@
 <?php
 require 'vendor/autoload.php';
-require 'DatabaseConnection.php';
-require 'class/user.php';
+require 'database/DatabaseConnection.php';
+require 'models/user.php';
 
 function auth() {
     if (isset($_COOKIE['remember_token'])) {
