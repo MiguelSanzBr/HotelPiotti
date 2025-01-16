@@ -14,7 +14,7 @@ jobs:
 
       - name: Send Discord Webhook
         env:
-          DISCORD_WEBHOOK_URL: https://discord.com/api/webhooks/1318642830553387018/A1AmS2B5gOMVYA3AyDH9Roz7dn3FBtpL2c2BhujOoTNUtmCw4fvebhDLlKx0t502FC-6
+          DISCORD_WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}
           REPOSITORY_URL: https://github.com/MiguelSanzBr/HotelPiotti
           COMMIT_AUTHOR: ${{ github.actor }}
         run: |
