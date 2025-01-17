@@ -4,7 +4,7 @@ use Illuminate\Database\Capsule\Manager as Capsule;
 use Illuminate\Database\Schema\Blueprint;
 
 
-require 'DatabaseConnection.php';
+require_once __DIR__ . '/../DatabaseConnection.php';
 
 Capsule::schema()->create('users', function (Blueprint $table) {
     $table->id(); // Coluna id

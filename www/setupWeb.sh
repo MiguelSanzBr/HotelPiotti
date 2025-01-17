@@ -14,7 +14,7 @@ docker-php-ext-install pdo pdo_pgsql
 composer install
 
 # Executa a migração
-php /var/www/html/migrations/create_users_table.php
+php /database/migrations/create_users_table.php
 
 # Inicia o PHP-FPM
 php-fpm

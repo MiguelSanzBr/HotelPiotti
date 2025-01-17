@@ -1,0 +1,15 @@
+{
+  "name": "hotelpiotti",
+  "version": "1.0.0",
+  "main": "tailwind.config.js",
+ "scripts": {
+  "build:css": "tailwindcss -i ./assets/css/tailwind.css -o ./assets/css/tailWind.css"
+},
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.0.0"
+  },
+  "description": ""
+  
+}

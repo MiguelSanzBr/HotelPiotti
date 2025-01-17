@@ -17,6 +17,20 @@ services:
       retries: 3
     command: ["/bin/bash", "/var/www/html/setupWeb.sh"]
 
+  npm:
+    image: node:16
+    container_name: hotel_piotti_npm
+    volumes:
+      - ./www:/var/www/html
+    working_dir: /var/www/html
+    command: >
+      sh -c "chmod -R 777 /var/www/html && npm install && npm run build:css" # Garantir permissões antes de executar
+    depends_on:
+      - web
+    networks:
+      - hotel_network
+    restart: on-failure
+
   nginx:
     image: nginx:latest
     container_name: hotel_piotti_nginx
