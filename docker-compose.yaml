@@ -1,0 +1,76 @@
+services:
+  web:
+    image: php:8.3-fpm
+    container_name: hotel_piotti_web
+    ports:
+      - "8080:80"
+    volumes:
+      - ./www:/var/www/html
+    depends_on:
+      - db
+    networks:
+      - hotel_network  
+    healthcheck:
+      test: ["CMD-SHELL", "php -v || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    command: ["/bin/bash", "/var/www/html/setupWeb.sh"]
+
+  npm:
+    image: node:16
+    container_name: hotel_piotti_npm
+    volumes:
+      - ./www:/var/www/html
+    working_dir: /var/www/html
+    command: >
+      sh -c "chmod -R 777 /var/www/html && npm install && npm run build:css" # Garantir permissões antes de executar
+    depends_on:
+      - web
+    networks:
+      - hotel_network
+    restart: on-failure
+
+  nginx:
+    image: nginx:latest
+    container_name: hotel_piotti_nginx
+    ports:
+      - "8081:80"  
+    volumes:
+      - ./www:/var/www/html
+      - ./nginx.conf:/etc/nginx/nginx.conf
+      - ./fastcgi-php.conf:/etc/nginx/snippets/fastcgi-php.conf
+    depends_on:
+      - web
+    networks:
+      - hotel_network  
+    healthcheck:
+      test: ['CMD', '/bin/healthcheck.sh']
+      interval: 1m
+      timeout: 5s
+      retries: 3
+
+  db:
+    image: postgres:latest
+    container_name: hotel_piotti_db
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: admin123
+      POSTGRES_DB: hotel_piotti_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./sql:/docker-entrypoint-initdb.d
+    networks:
+      - hotel_network 
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready", "-d", "db_prod"]
+      interval: 30s
+      timeout: 60s
+      retries: 5
+      start_period: 80s 
+
+#! descubra o ip do site: docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' hotel_piotti_nginx
+networks:
+  hotel_network: 
+    driver: bridge

@@ -1,0 +1,12 @@
+# Ignorar arquivos de ambiente
+.env
+# Ignorar a pasta de dependências do Composer 
+/www/vendor/
+# Ignorar a pasta de dependências do Node.JS
+/www/node_modules/
+# Ignorar package-lock.json
+/www/package-lock.json
+# Ignorar composer.lock
+/www/composer.lock
+# Ignorar a aquivo Buildado do TailWind
+/www/assets/css/tailWind.css
