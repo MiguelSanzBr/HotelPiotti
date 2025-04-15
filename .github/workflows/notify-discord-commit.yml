@@ -16,14 +16,11 @@ jobs:
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}
           REPOSITORY_URL: https://github.com/MiguelSanzBr/HotelPiotti
+
           COMMIT_AUTHOR: ${{ github.actor }}
-        run: |
-          COMMIT_ID=$(git rev-parse --short HEAD)
-          BRANCH_NAME=$(git rev-parse --abbrev-ref HEAD)
-          
-          PAYLOAD=$(cat <<EOF
-          {
+
            "content": "**Commit:** $COMMIT_ID \n**Branch:** $BRANCH_NAME \nNo **Repositório**: $REPOSITORY_URL \nVlw, $COMMIT_AUTHOR!!!"
+
           }
           EOF
           )
