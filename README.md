@@ -128,3 +128,5 @@ Para suporte, envie um email para [miguelsanzb.p@gmail.com] ou abra uma issue no
 ## 👥 Autores
 
 - [MiguelSanzBr](https://github.com/MiguelSanzBr)
+- [EstruttiJP](https://github.com/EstruttiJP)
+- [BerTrapp](https://github.com/BerTrapp)
